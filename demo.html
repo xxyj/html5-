@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+	<body>
+	  <input type="button" value="点我看看" id="btn"> 
+	  <script type="text/javascript">
+	    if(!window.Notification){
+			alert("浏览器不支持也是木有办法的!");
+		}else{
+			var btn = document.getElementById("btn");
+			var fn = function() {
+				if (Notification.permission == "granted") {
+					var notification = new Notification("hello word", {
+						body: '恩恩，什么都是从hello word开始的'
+					});
+				}
+			}
+			btn.onclick = function () {
+				//这个需要授权 granted 允许  denied阻止  default 默认，用户不管
+				if (Notification.permission == "granted") {
+					fn();
+				}
+			}
+
+        }
+	  </script>
+	</body> 
+</html>
