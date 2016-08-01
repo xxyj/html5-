@@ -12,10 +12,14 @@ window.Notification
    
    
 ###调用语法
+
   一、调用方式：
    1）链式：Notification.requestPermission().then(function(permission) { ... });
+   
    2）回调模式：Notification.requestPermission(callback);
+   
  二、回调处理方式
+ 
      通知信息处理方式：new Notification(title, options)
      
      title表示标题 
